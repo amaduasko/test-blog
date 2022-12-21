@@ -6,6 +6,7 @@ from build_data.db import db
 
 def main_screen(message = None):
     if message and bot :
+        chat_ids[message.chat.id] = False
         k_board = types.ReplyKeyboardMarkup(row_width=1, resize_keyboard=True, one_time_keyboard=True)
         fio_button = types.KeyboardButton(text="Записать работника")
         k_board.add(fio_button)
