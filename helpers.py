@@ -21,7 +21,7 @@ def handle_send_document(message = None):
             bot.reply_to(message, "Документ загружается...")
             db.add_new_user(user_fio=message.text)
             file = asyncio.run(fetch_xml_doc())
-            # bot.send_document(message.chat.id, file)
+            bot.send_document(message.chat.id, file)
             main_screen(message)
             chat_ids[message.chat.id] = False
         else:

@@ -22,14 +22,14 @@ async def fetch_xml_doc(file_name='users'):
     
     # add columns
     data = db.get_users_selections()
-    # for index, user in enumerate(data):
-    #     worksheet.write_row(f'A{index+2}', [user.fio,f'{user.datar}', user.role])
+    for index, user in enumerate(data):
+        worksheet.write_row(f'A{index+2}', [user.fio,f'{user.datar}', user.role])
     
-    # workbook.close()
+    workbook.close()
 
-    # file = open(path, 'rb')
+    file = open(path, 'rb')
 
-    # print('File generated !')
+    print('File generated !')
 
-    return ''
+    return file
  
